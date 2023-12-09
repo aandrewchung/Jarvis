@@ -23,7 +23,8 @@ class HashDataTest(PluginTest):
         self.test(self.jarvis_api, "")
 
         # Check the output
-        expected_output = "Invalid input type. Please enter 'string' or 'file'."
+        expected_output = "Invalid input type. Please enter "\
+            "'string' or 'file'."
         self.assertEqual(self.history_say().last_text(), expected_output)
 
     def test_invalid_hash_function(self):
@@ -51,7 +52,7 @@ class HashDataTest(PluginTest):
         # Check the output
         expected_output = 'Hashed result: 65a8e27d8879283831b664bd8b7f0ad4'
         self.assertEqual(self.history_say().last_text(), expected_output)
-    
+
     def test_hash_string2(self):
         # Set predefined input values
         self.queue_input('string')
@@ -62,7 +63,8 @@ class HashDataTest(PluginTest):
         self.test(self.jarvis_api, "")
 
         # Check the output
-        expected_output = 'Hashed result: 005ab62754e4c38100017e5a515e1fd7e7072343a496669aa40c59367361a42e'
+        expected_output = 'Hashed result: '\
+            '005ab62754e4c38100017e5a515e1fd7e7072343a496669aa40c59367361a42e'
         self.assertEqual(self.history_say().last_text(), expected_output)
 
     def test_hash_string3(self):
@@ -75,7 +77,8 @@ class HashDataTest(PluginTest):
         self.test(self.jarvis_api, "")
 
         # Check the output
-        expected_output = 'Hashed result: 6951d3ce42ba70364585925b40c1ea55bcd23e2a'
+        expected_output = 'Hashed result: 6951d3ce42ba70364'\
+            '585925b40c1ea55bcd23e2a'
         self.assertEqual(self.history_say().last_text(), expected_output)
 
     def test_hash_file_invalid_path_md5(self):
@@ -88,7 +91,8 @@ class HashDataTest(PluginTest):
         self.test(self.jarvis_api, "")
 
         # Check the output
-        expected_output = 'Hashed result: Error: File not found or inaccessible.'
+        expected_output = 'Hashed result: Error: File not found '\
+            'or inaccessible.'
         self.assertEqual(self.history_say().last_text(), expected_output)
 
     def test_hash_file_invalid_path_md5(self):
@@ -101,7 +105,8 @@ class HashDataTest(PluginTest):
         self.test(self.jarvis_api, "")
 
         # Check the output
-        expected_output = 'Hashed result: Error: File not found or inaccessible.'
+        expected_output = 'Hashed result: Error: File not found '\
+            'or inaccessible.'
         self.assertEqual(self.history_say().last_text(), expected_output)
 
     def test_hash_file_invalid_path_sha256(self):
@@ -114,7 +119,8 @@ class HashDataTest(PluginTest):
         self.test(self.jarvis_api, "")
 
         # Check the output
-        expected_output = 'Hashed result: Error: File not found or inaccessible.'
+        expected_output = 'Hashed result: Error: File not found '\
+            'or inaccessible.'
         self.assertEqual(self.history_say().last_text(), expected_output)
 
     def test_hash_file_valid_path1(self):
@@ -152,7 +158,8 @@ class HashDataTest(PluginTest):
         self.test(self.jarvis_api, "")
 
         # Check the output
-        expected_output = 'Hashed result: dd6fdaba4cff3db9692d2a86b39a331ad92c0667'
+        expected_output = 'Hashed result: dd6fdaba4cff3db969'\
+            '2d2a86b39a331ad92c0667'
         self.assertEqual(self.history_say().last_text(), expected_output)
 
         # Clean up created file
@@ -173,7 +180,8 @@ class HashDataTest(PluginTest):
         self.test(self.jarvis_api, "")
 
         # Check the output
-        expected_output = 'Hashed result: efa343369047cf2617265c74e92911883efb70849db7a4194021608450eaee4d'
+        expected_output = 'Hashed result: efa343369047cf2617265c74e92'\
+            '911883efb70849db7a4194021608450eaee4d'
         self.assertEqual(self.history_say().last_text(), expected_output)
 
         # Clean up created file
